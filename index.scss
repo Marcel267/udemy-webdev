@@ -1,0 +1,155 @@
+$primary: #785ddc;
+$secondary: #eff1f1;
+
+@import "bootstrap/scss/bootstrap.scss";
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1090;
+}
+
+.offcanvas {
+  width: 250px !important;
+  z-index: 1100;
+  .nav-item:hover {
+    background-color: rgb(211, 211, 211);
+  }
+}
+
+.page-header {
+  background-image: url("images/header-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5); /* Tint color */
+  background-blend-mode: multiply;
+  background-position: 50% 0%;
+}
+
+.navbar-brand {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.header-jumbotron {
+  height: 400px;
+
+  @include media-breakpoint-up(sm) {
+    height: 500px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 600px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 700px;
+  }
+
+  h1 {
+    font-weight: 500;
+  }
+}
+
+section {
+  padding: 120px 0;
+}
+
+.icon {
+  height: 80px;
+  width: 80px;
+}
+
+footer .icon,
+.our-team .icon {
+  height: 40px;
+  width: 40px;
+}
+
+.card {
+  max-width: 20rem;
+}
+
+.our-team,
+.portfolio {
+  background-color: #f7f7f7;
+}
+
+.our-team {
+  .row {
+    @include media-breakpoint-up(lg) {
+      width: 75%;
+      justify-content: center;
+    }
+
+    .col-6 {
+      @include media-breakpoint-up(lg) {
+        min-width: 200px;
+        margin: 0 20px;
+      }
+    }
+
+    .text-bottom {
+      @include media-breakpoint-up(md) {
+        padding: 0 20%;
+      }
+    }
+  }
+}
+
+.aboutus-list {
+  @include media-breakpoint-up(lg) {
+    background: linear-gradient(
+      to right,
+      white 0%,
+      white calc(50% - 2px),
+      #f7f7f7 calc(50% - 2px),
+      #f7f7f7 calc(50% + 2px),
+      white calc(50% + 2px)
+    );
+  }
+  .row:last-child {
+    background-color: white;
+  }
+}
+
+#contact-us {
+  background-color: #222222;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    // z-index: -1;
+    top: 20%;
+    left: 50%;
+  }
+
+  .content {
+    z-index: 3;
+  }
+
+  input {
+    width: 350px;
+    // min-width: 100%;
+    font-size: 12px;
+  }
+
+  .input-fields {
+    .left {
+      height: 40px;
+    }
+
+    .right {
+      height: 152px;
+      width: 350px;
+      // min-width: 100%;
+      padding-top: 500px;
+      font-size: 12px;
+      resize: none;
+    }
+  }
+}
