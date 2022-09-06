@@ -11052,4 +11052,8 @@ footer .icon,
   padding-top: 500px;
   font-size: 12px;
   resize: none;
+}
+
+.navbar-nav i {
+  width: 30px;
 }/*# sourceMappingURL=index.css.map */
