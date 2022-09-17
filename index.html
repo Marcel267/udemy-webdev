@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="index.min.css" />
   <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
-  <script src="https://kit.fontawesome.com/376e80cc8e.js" crossorigin="anonymous"></script>
-  <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="manifest" href="manifest.json">
+  <script src="https://kit.fontawesome.com/376e80cc8e.js" crossorigin="anonymous" defer></script>
+  <script src="bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
   <title>Eigene Seite</title>
 </head>
 
@@ -485,6 +486,13 @@
         mybutton.style.display = "none";
       }
     }
+
+    //serviceworker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+
+    }
+
   </script>
 </body>
 
